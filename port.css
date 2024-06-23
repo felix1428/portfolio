@@ -3,20 +3,23 @@ body {
     font-family: 'Roboto Mono', monospace;
     overflow-x: hidden;
     background-color: #f8f9fa;
+    padding-top: 30px; /* To avoid content hiding behind fixed navbar */
 }
-
 
 .navbar {
     background-color: #f8c5e1;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
 }
 
-.nav-link {
+.navbar-nav .nav-link {
     font-size: 1rem;
     transition: color 0.3s;
 }
 
-.nav-link:hover {
+.navbar-nav .nav-link:hover {
     color: #007bff;
 }
 
@@ -47,17 +50,26 @@ h1, h2, h3, h4, h5 {
 #home {
     text-align: center;
     padding: 3rem 0;
-    background: linear-gradient(135deg, rgb(248, 105, 198), #d0e);
     color: #fff;
 }
 
 .ho {
-    color: #000000;
-    text-align: justify;
-    font-size: 2.5rem;
+    color: #000;
     text-align: center;
+    font-size: 2.5rem;
     margin-top: 2rem;
     animation: fadeInDown 2s ease-in-out;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .figure {
@@ -66,6 +78,17 @@ h1, h2, h3, h4, h5 {
     align-items: center;
     margin-top: 2rem;
     animation: fadeInUp 2s ease-in-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .figure-img {
@@ -78,25 +101,13 @@ h1, h2, h3, h4, h5 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-@keyframes bounceIn {
-    0% {
-        transform: scale(0.5);
-        opacity: 0;
-    }
-    100% {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-
 .section {
     padding: 4rem 0;
 }
 
-#myskills, #about,#contact{
+#about, #myskills, #contact {
     text-align: center;
 }
-
 
 #myskills .skill {
     text-align: center;
@@ -203,5 +214,19 @@ footer {
     #projects .card {
         width: 100%;
         max-width: 500px;
+    }
+
+    #myskills .skill-icon img {
+        max-width: 80px;
+    }
+
+    .gotopbtn {
+        width: 40px;
+        height: 40px;
+    }
+
+    .gotopbtn img {
+        width: 20px;
+        height: 20px;
     }
 }
