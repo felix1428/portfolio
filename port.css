@@ -1,6 +1,5 @@
 /* General styling */
 body {
-    font-family: 'Roboto Mono', monospace;
     overflow-x: hidden;
     background-color: #f8f9fa;
     padding-top: 30px; /* To avoid content hiding behind fixed navbar */
@@ -109,6 +108,13 @@ h1, h2, h3, h4, h5 {
     text-align: center;
 }
 
+.title-bg {
+    text-align: center;
+    color:  #fcfbfb;
+    background-color: rgb(119, 108, 117);
+    transition: 0.3s;
+}
+
 #myskills .skill {
     text-align: center;
     margin: 1rem 0;
@@ -165,7 +171,7 @@ h1, h2, h3, h4, h5 {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #007bff;
+    background-color: #ff0095;
     border-radius: 50%;
     width: 50px;
     height: 50px;
@@ -177,7 +183,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .gotopbtn:hover {
-    background-color: #0056b3;
+    background-color: #fcfbfb;
 }
 
 .gotopbtn img {
@@ -229,4 +235,10 @@ footer {
         width: 20px;
         height: 20px;
     }
+
+    .footer{
+        font-size: 0.9rem;
+        width: 120%;
+    }
+
 }
