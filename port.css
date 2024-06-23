@@ -1,0 +1,207 @@
+/* General styling */
+body {
+    font-family: 'Roboto Mono', monospace;
+    overflow-x: hidden;
+    background-color: #f8f9fa;
+}
+
+
+.navbar {
+    background-color: #f8c5e1;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-link {
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #007bff;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+h1, h2, h3, h4, h5 {
+    animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#home {
+    text-align: center;
+    padding: 3rem 0;
+    background: linear-gradient(135deg, rgb(248, 105, 198), #d0e);
+    color: #fff;
+}
+
+.ho {
+    color: #000000;
+    text-align: justify;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: 2rem;
+    animation: fadeInDown 2s ease-in-out;
+}
+
+.figure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    animation: fadeInUp 2s ease-in-out;
+}
+
+.figure-img {
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.figure-img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.section {
+    padding: 4rem 0;
+}
+
+#myskills, #about,#contact{
+    text-align: center;
+}
+
+
+#myskills .skill {
+    text-align: center;
+    margin: 1rem 0;
+    padding: 1rem;
+    transition: transform 0.3s;
+}
+
+#myskills .skill:hover {
+    transform: scale(1.1);
+}
+
+#myskills .skill-icon img {
+    max-width: 100px;
+    margin-bottom: 1rem;
+}
+
+#projects .card-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+#projects .card {
+    width: 300px;
+    transition: transform 0.3s;
+}
+
+#projects .card:hover {
+    transform: scale(1.05);
+}
+
+#projects .card img {
+    max-width: 100%;
+    height: auto;
+}
+
+.social-icon {
+    display: inline-block;
+    margin: 1rem 0.5rem;
+}
+
+.social-icon img {
+    width: 40px;
+    margin: 0.5rem;
+    transition: transform 0.3s;
+}
+
+.social-icon img:hover {
+    transform: scale(1.2);
+}
+
+.gotopbtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.gotopbtn:hover {
+    background-color: #0056b3;
+}
+
+.gotopbtn img {
+    width: 25px;
+    height: 25px;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #343a40;
+    color: #fff;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .nav-link {
+        font-size: 0.9rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    #home .figure-caption {
+        font-size: 1.2rem;
+    }
+
+    #projects .card-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #projects .card {
+        width: 100%;
+        max-width: 500px;
+    }
+}
