@@ -1,10 +1,6 @@
-/* port.css */
-html {
+*,body {
     scroll-behavior: smooth;
-}
-
-body {
-    font-family: 'Roboto Mono', monospace;
+    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
     color: white;
@@ -12,6 +8,7 @@ body {
     list-style: none;
     box-sizing: border-box;
 }
+
 
 .bg-video {
     position: fixed;
@@ -34,17 +31,17 @@ header {
     position: fixed;
     top: 0; /* Add top: 0 to ensure it sticks to the top of the viewport */
     z-index: 1000; /* Add a high z-index to ensure it's above other content */
+
 }
+
 
 header .logo {
     font-size: 30px;
     text-transform: uppercase;
 }
-
 header nav ul {
     display: flex;
 }
-
 header nav ul li a {
     display: inline-block;
     color: #000;
@@ -54,39 +51,35 @@ header nav ul li a {
     text-transform: uppercase;
     transition: 0.2s;
 }
-
 header nav ul li a:hover,
 header nav ul li a.active {
     border-bottom-color: rgb(247, 45, 179);
 }
-
 .hamburger {
     cursor: pointer;
     display: none;
 }
-
 .hamburger div {
     width: 30px;
     height: 3px;
     margin: 5px 0;
     background: #000;
 }
-
 @media only screen and (max-width: 900px) {
     header {
         padding: 0 30px;
     }
 }
-
 @media only screen and (max-width: 700px) {
     .hamburger {
         display: block;
     }
     header nav {
-        position: relative;
+        position:relative;
         width: 100%;
         left: -100%;
         top: 70px;
+        width: 100%;
         background: #ffffff;
         padding: 30px;
         transition: 0.3s;
@@ -123,16 +116,16 @@ header nav ul li a.active {
     margin-left: 2rem; /* Adjust spacing between image and text */
     height: 40%;
 }
-
-.figure-caption {
+.figure-caption{
     flex: 2;
 }
 
 .figure-caption:hover {
     flex: 2;
     color: black;
-    font-size: 25px;
+    font-size:25px;
     animation: forwards 0.2s;
+    
 }
 
 @media (max-width: 768px) {
@@ -151,25 +144,29 @@ header nav ul li a.active {
     }
 }
 
+
 .title-bg {
     background-color: rgba(255, 255, 255, 0.1);
     padding: 0.5em;
     border-radius: 5px;
+}
+h1, h2, h3, h4 {
+    color: white;
 }
 
 h1, h2, h3, h4, h5, h6 {
     text-align: center;
     color: rgb(8, 8, 8);
 }
-
-.fon {
-    text-align: center;
+.fon{
+    text-align:center;
     font-size: x-large;
 }
-
 h1.ho {
     font-size: 1.5em;
 }
+
+
 
 .card-wrapper {
     display: flex;
@@ -238,6 +235,7 @@ h1.ho {
     }
 }
 
+
 .gotopbtn {
     position: fixed;
     bottom: 20px;
@@ -257,8 +255,7 @@ h1.ho {
     background-color: rgba(0, 0, 0, 0.7);
     color: white;
 }
-
-.fo {
+.fo{
     color: white;
 }
 
@@ -269,9 +266,9 @@ h1.ho {
 }
 
 .skill-icon img {
-    max-width: 80px;
-    margin-bottom: 1rem;
-    transition: transform 0.3s;
+     max-width: 80px;
+     margin-bottom: 1rem;
+     transition: transform 0.3s;
 }
 
 .skill-icon img:hover {
@@ -289,7 +286,7 @@ h1.ho {
     nav {
         flex-direction: column;
     }
-
+    
     .navbar-toggler {
         display: block;
     }
@@ -349,3 +346,4 @@ h1.ho {
         padding: 0.5em;
     }
 }
+
